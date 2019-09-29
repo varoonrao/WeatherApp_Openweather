@@ -43,6 +43,7 @@ function getWeather(latitude, longitude) {
       weather.iconId = data.weather[0].icon;
       weather.temperature.value = Math.floor(data.main.temp_max);
       weather.temperature.min = Math.floor(data.main.temp_min);
+      weather.city=data.name;
 
       var hours=new Date((weather.hour)*1000);
       var hour = hours.getHours();
@@ -67,7 +68,7 @@ function displayWeather() {
   iconElememnt.setAttribute = `<img src="${weather.iconId}.png"/>`;
   document.getElementById('max').innerHTML = weather.temperature.value + "&deg C";
   document.getElementById('weather_description').innerHTML = weather.description;
-  document.getElementById('place').innerHTML = weather.name;
+  document.getElementById('place').innerHTML = weather.city;
   document.getElementById('min').innerHTML = weather.temperature.min + "&deg C";
 }
 

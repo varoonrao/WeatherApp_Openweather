@@ -124,8 +124,8 @@ button {
 /* dropdown */
 
 .dropbtn {
-    background-color: #3498DB;
-    color: white;
+    background-color:none;
+    /* color: white; */
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -133,21 +133,22 @@ button {
   }
   
   .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
+    background-color:none;
   }
   
   .dropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
+    top:20px;
+    right:16px;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    background-color: rgba(41, 127, 185, 0.377);
+    min-width: auto;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
@@ -156,8 +157,9 @@ button {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    font-weight: bold;
   }
   
-  .dropdown a:hover {background-color: #ddd;}
+  .dropdown a:hover {background-color: rgba(255, 255, 255, 0.418);}
   
   .show {display: block;}
