@@ -47,26 +47,22 @@
                         <button onclick="dropDown()" onmouseenter="dropDown();" class="dropbtn"><i
                                 class="fa fa-bars fa-lg"></i></button>
                         <div id="myDropdown" class="dropdown-content">
-                            <button onclick="">New York </button>
-                            <button onclick="">Chicago  </button>
-                            <button onclick="">Abu Dhabi</button>
-                            <button onclick="">London   </button>
-                            <button onclick="">Amsterdam</button>
-
-
+                            <button onclick="cityClick(40.7128,74.0060,9.50)">New York </button>
+                            <button onclick="cityClick(41.8781,87.6298,10.50)">Chicago  </button>
+                            <button onclick="cityClick(24.4539,54.3773,1.50)">Abu Dhabi</button>
+                            <button onclick="cityClick(51.5074,0.1278,4)">London   </button>
+                            <button onclick="cityClick(52.3667,4.8945,3.5)">Amsterdam</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="forcast">
-
+                <p id="forecast"></p>
+                <p id="fore_min"></p>
             </div>
         </div>
     </div>
 
-    <!-- <button id="getIt" onclick="gettingJSON()">Get JSON</button>
-    <p id="lat_long"></p>
-    <p id="windSpeed"></p> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="script.js" async defer></script>
 </body>
