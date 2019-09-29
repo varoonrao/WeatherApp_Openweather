@@ -14,30 +14,24 @@ body {
 
 button {
     border: none;
-    padding: var(--main-padding);
+    font-family: 'Quicksand';
 }
 
-/* .card {
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-  } */
 
 .container {
     display: grid;
     width: 60%;
     height: 500px;
     margin: 5% 0% 0 20%;
-    grid-template-areas: "today image_dis""forcast forcast";
+    grid-template-areas: "today image_dis"
+        "forcast forcast";
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 2fr 1fr;
-    box-shadow: 0 15px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-    /* vertical-align:middle; */
+    box-shadow: 0 15px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.445);
 }
 
 /* .container>div {
     /* border: 1px solid #000; */
-
-
-
 .today {
     grid-area: today;
     padding: var(--main-padding);
@@ -58,7 +52,8 @@ button {
     /* filter: invert(100%); */
     /* -webkit-filter: invert(100%); */
 }
-.wea_des{
+
+.wea_des {
     color: var(--main-text_color_white);
     text-transform: uppercase;
     letter-spacing: var(--main-text-space);
@@ -101,9 +96,7 @@ button {
 
 .dropdown_overlay {
     float: right;
-    /* top: 8px; */
     z-index: 10;
-    /* right: 16px; */
 }
 
 .image_main {
@@ -124,42 +117,46 @@ button {
 /* dropdown */
 
 .dropbtn {
-    background-color:none;
-    /* color: white; */
-    padding: 16px;
+    background-color: none;
+    opacity: 1;
     font-size: 16px;
     border: none;
     cursor: pointer;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color:none;
-  }
-  
-  .dropdown {
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: none;
+}
+
+.dropdown {
     position: absolute;
     display: inline-block;
-    top:20px;
-    right:16px;
-  }
-  
-  .dropdown-content {
+    top: 20px;
+    right: 16px;
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(41, 127, 185, 0.377);
-    min-width: auto;
+    /* background-color: rgba(41, 127, 185, 0.377); */
+    /* min-width: auto; */
     overflow: auto;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
+    z-index: 10;
+}
+
+.dropdown-content button {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     font-weight: bold;
-  }
-  
-  .dropdown a:hover {background-color: rgba(255, 255, 255, 0.418);}
-  
-  .show {display: block;}
+}
+
+.dropdown button:hover {
+    background-color: rgba(255, 255, 255, 0.418);
+}
+
+.show {
+    display: block;
+}

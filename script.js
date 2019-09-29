@@ -3,6 +3,7 @@ const descElememnt = document.querySelector(".min");
 const iconElememnt = document.querySelector(".weather_data_image");
 const tempElememnt = document.querySelector(".max");
 const disPlace = document.querySelector(".text_overlay_place");
+const weather_image=document.querySelector(".image_main");
 
 const weather = {};
 
@@ -42,18 +43,31 @@ function getWeather(latitude, longitude) {
       weather.description = data.weather[0].description;
       weather.iconId = data.weather[0].icon;
       weather.temperature.value = Math.floor(data.main.temp_max);
-      weather.temperature.min = Math.floor(data.main.temp_min);
-      weather.city=data.name;
+          weather.temperature.min = Math.floor(data.main.temp_min);
+          weather.city=data.name;
 
-      var hours=new Date((weather.hour)*1000);
-      var hour = hours.getHours();
-      var greetingText = document.getElementById('greeting_text');
+          var hours=new Date((weather.hour)*1000);
+          var hour = hours.getHours();
+          var greetingText = document.getElementById('greeting_text');
       if (hour > 0 && hour < 12) {
         greetingText.innerHTML = "GOOD MORNING";
+        var morn=document.getElementById('weather_image_full');
+        morn.src="imgs/morning.jpg";
+        morn.setAttribute('src',morn.src);
+        weather_image.setAttribute="<img src='imgs/morning.jpg'>";
       } else if (hour >= 12 && hour < 16) {
         greetingText.innerHTML = "GOOD AFTERNOON";
+        var aft=document.getElementById('weather_image_full');
+        aft.src="imgs/afnoon.jpg";
+        aft.setAttribute('src',aft.src);
+        weather_image.setAttribute="<img src='imgs/afnoon.jpg'>";
+
       } else {
         greetingText.innerHTML = "GOOD EVENING";
+        var night=document.getElementById('weather_image_full');
+        night.src="imgs/night.jpg";
+        night.setAttribute('src',night.src);
+        weather_image.setAttribute="<img src='imgs/night.jpg'>";
       } 
     })
     .then(function () {
@@ -82,7 +96,7 @@ function dayName() {
 
 // dropdown
 
-function myFunction() {
+function dropDown() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 

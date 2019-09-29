@@ -29,7 +29,8 @@
                     <br>
                     <br>
                     <span class="today_span weather_data_layouts">
-                        <h2 id="max" class="max" style="display :inline">--</h2> &nbsp;|&nbsp;<h2 id="min" class="min" style="display :inline">
+                        <h2 id="max" class="max" style="display :inline">--</h2> &nbsp;|&nbsp;<h2 id="min" class="min"
+                            style="display :inline">
                             --</h2>
                     </span>
                     <br>
@@ -37,19 +38,24 @@
                 </center>
             </div>
             <div class="image_div">
-                <img id="weather_image" src="imgs/afnoon.jpg" class="image_main" alt="image_loading">
+                <img id="weather_image_full" class="image_main" src="imgs/">
                 <div class="text_overlay" id="greeting_text">--</div>
                 <div class="text_overlay_place" id="place">--</div>
                 <div class="dropdown_overlay">
                     <!-- </button> -->
                     <div class="dropdown">
-                            <button onclick="myFunction()" class="dropbtn"></button>
-                            <div id="myDropdown" class="dropdown-content">
-                              <a href="" onclick="">Home</a>
-                              <a href="">About</a>
-                              <a href="">Contact</a>
-                            </div>
-                          </div>
+                        <button onclick="dropDown()" onmouseenter="dropDown();" class="dropbtn"><i
+                                class="fa fa-bars fa-lg"></i></button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <button onclick="">New York </button>
+                            <button onclick="">Chicago  </button>
+                            <button onclick="">Abu Dhabi</button>
+                            <button onclick="">London   </button>
+                            <button onclick="">Amsterdam</button>
+
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="forcast">
