@@ -41,7 +41,7 @@ function getWeather(latitude, longitude) {
     .then(function (data) {
       weather.description = data.weather[0].description;
       weather.iconId = data.weather[0].icon;
-      weather.temperature.value = Math.floor(data.main.temp);
+      weather.temperature.value = Math.floor(data.main.temp_max);
       weather.temperature.min = Math.floor(data.main.temp_min);
 
       var hours=new Date((weather.hour)*1000);
@@ -80,3 +80,21 @@ function dayName() {
 //     $.getJSON("http://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+longi+"&APPID=3925448c90c02ec2a83ed41c1a713a1d",function(json){
 
 // dropdown
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
