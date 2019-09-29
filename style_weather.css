@@ -1,0 +1,121 @@
+:root {
+    --main-padding: 15px;
+    --main-text_color_white: white;
+    --main-text_color_blue: rgb(3, 98, 207);
+    --main-text-space: 5px;
+    --main-text-strength: bolder;
+    --main-text-size_medium: 18px;
+    --main-text-size_large: 26px;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+button {
+    border: none;
+    padding: var(--main-padding);
+}
+
+/* .card {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  } */
+
+.container {
+    display: grid;
+    width: 60%;
+    height: 500px;
+    margin: 5% 0% 0 20%;
+    grid-template-areas: "today image_dis""forcast forcast";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    box-shadow: 0 15px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+    /* vertical-align:middle; */
+}
+
+.container>div {
+    /* border: 1px solid #000; */
+
+}
+
+.today {
+    grid-area: today;
+    padding: var(--main-padding);
+    background-color: var(--main-text_color_blue);
+}
+
+.image_dis {
+    grid-area: image_dis;
+}
+
+.forcast {
+    grid-area: forcast;
+}
+
+.weather_data_image {
+    width: 30%;
+    height: 30%;
+    /* filter: invert(100%); */
+    /* -webkit-filter: invert(100%); */
+}
+.wea_des{
+    color: var(--main-text_color_white);
+    text-transform: uppercase;
+    letter-spacing: var(--main-text-space);
+    font-weight: var(--main-text-strength);
+}
+
+.weather_data_layout {
+    color: var(--main-text_color_white);
+    text-transform: uppercase;
+    letter-spacing: var(--main-text-space);
+    font-weight: var(--main-text-strength);
+}
+
+.image_div {
+    contain: size;
+    opacity: 0.6;
+    position: relative;
+    object-fit: cover;
+}
+
+.text_overlay {
+    position: absolute;
+    top: 40px;
+    color: var(--main-text_color_blue);
+    font-weight: bold;
+    font-size: var(--main-text-size_medium);
+    left: 16px;
+}
+
+.text_overlay_place {
+    position: absolute;
+    color: var(--main-text_color_blue);
+    font-weight: var(--main-text-strength);
+    text-transform: uppercase;
+    letter-spacing: var(--main-text-space);
+    font-size: var(--main-text-size_large);
+    top: 60px;
+    left: 16px;
+}
+
+.dropdown_overlay {
+    float: right;
+    /* top: 8px; */
+    z-index: 10;
+    /* right: 16px; */
+}
+
+.image_main {
+    height: 100%;
+    width: 100%;
+
+}
+
+.today_span {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: var(--main-text-space);
+    font-weight: var(--main-text-strength);
+    color: var(--main-text_color_white)
+}
