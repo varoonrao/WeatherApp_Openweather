@@ -77,7 +77,8 @@ button {
 .text_overlay {
     position: absolute;
     top: 40px;
-    color: var(--main-text_color_blue);
+    /* color: var(--main-text_color_blue); */
+    color: blue;
     font-weight: bold;
     font-size: var(--main-text-size_medium);
     left: 16px;
@@ -85,7 +86,8 @@ button {
 
 .text_overlay_place {
     position: absolute;
-    color: var(--main-text_color_blue);
+    /* color: var(--main-text_color_blue); */
+    color: blue;
     font-weight: var(--main-text-strength);
     text-transform: uppercase;
     letter-spacing: var(--main-text-space);
